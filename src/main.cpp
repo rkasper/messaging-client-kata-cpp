@@ -10,17 +10,11 @@ int main(int argc, char *argv[]) {
     string to = argv[1];
 
     string message;
-    if (argc > 2) {
+    if (argc > 2 && ((string)argv[2]).length() > 0) {
         message = argv[2];
     } else {
         // TODO Send error messages to cerr?
         cout << "Cannot send an email with no body." << endl;
-        return 1;
-    }
-
-    if (message.length() < 1) {
-        cout << "Cannot send an email with no body." << endl;
-        // TODO Return unique error codes?
         return 1;
     }
 
