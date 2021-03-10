@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    // TODO Be consistent with logic. Should the action occur if the condition is true or if it's false?
     if (to.find('@') == string::npos) {
         cout << "Invalid email address: no at sign" << endl;
         return 1;
